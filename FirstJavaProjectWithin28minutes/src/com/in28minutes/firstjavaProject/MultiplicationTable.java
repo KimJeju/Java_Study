@@ -6,7 +6,7 @@ public class MultiplicationTable {
 		print(5);
 
 	}
-	
+
 	void print(int table) {
 		print(table, 1, 10);
 	}
