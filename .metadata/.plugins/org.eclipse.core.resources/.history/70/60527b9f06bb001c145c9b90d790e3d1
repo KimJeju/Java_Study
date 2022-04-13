@@ -1,0 +1,13 @@
+package called_java_book;
+
+public class MyBook {
+
+	public static void main(String[] args) {
+	
+		avaBook artOfComputerProgramming = new JavaBook();
+		JavaBook EffectiveJava = new JavaBook();
+		JavaBook cleanCode = new JavaBook();
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package called_java_book;
+
+public class MyBook {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

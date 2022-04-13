@@ -1,0 +1,6 @@
+package called_java_book;
+
+public class JavaBook {
+
+	JavaBook artOfComputerProgramming = new javaBook();
+}

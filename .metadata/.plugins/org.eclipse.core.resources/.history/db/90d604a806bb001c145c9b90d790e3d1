@@ -1,0 +1,8 @@
+package called_java_book;
+
+public class JavaBook {
+
+	JavaBook artOfComputerProgramming = new JavaBook();
+	JavaBook EffectiveJava = new JavaBook();
+	JavaBook cleanCode = new JavaBook();
+}
