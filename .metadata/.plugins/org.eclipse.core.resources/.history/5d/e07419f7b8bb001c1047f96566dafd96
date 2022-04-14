@@ -1,0 +1,32 @@
+package com.in28minutes.oops;
+
+public class MotorBike {
+
+	//오토바이의 상태를 나타내는 함수 (state)
+	private int speed; //멤버 변수 Speed
+	
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		if(speed > 0)
+		this.speed = speed;	
+	}
+
+	public void increaseSpeed(int howMuch) { // 가속 메서드
+		
+		this.speed = this.speed + howMuch;
+	}
+	
+	public void decreaseSpeed(int howMuch) { // 감속 메서드
+		
+		setSpeed(this.speed - howMuch);
+	}
+	
+	
+	
+	void start() {
+		System.out.println("Bike started");
+	}
+}

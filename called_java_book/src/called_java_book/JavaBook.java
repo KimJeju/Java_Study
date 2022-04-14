@@ -6,17 +6,29 @@ public class JavaBook {
 	private int noOfCopies;
 	
 	
-	
-	public int getNoOfCopies() {
+	public int getNoOfCopies() { 
 		return noOfCopies;
 	}
-
 
 
 	public void setNoOfCopies(int noOfCopies) {
 		this.noOfCopies = noOfCopies;
 	}
-
+	
+	
+	public void increaseBook(int howMany) { // 증감
+		this.noOfCopies = noOfCopies + howMany;
+	}
+	
+	
+	public void decreaseBook(int howMany) { // 가감
+		
+		if(this.noOfCopies - howMany <= 0)
+		this.noOfCopies = 0;
+		
+		else
+		this.noOfCopies = noOfCopies - howMany;
+	}
 
 
 	void MyBook(){
