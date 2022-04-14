@@ -12,11 +12,7 @@ public class MyBook {
 		artOfComputerProgramming.MyBook();
 		EffectiveJava.MyBook();
 		cleanCode.MyBook();
-		
-		
-		artOfComputerProgramming.noOfCopies = 10;
-		EffectiveJava.noOfCopies = 5;
-		cleanCode.noOfCopies = 7;
+
 	}
 
 }
