@@ -1,0 +1,19 @@
+package com.in28minutes.oops;
+
+public class MotorBikeRunner {
+
+	public static void main(String[] args) {
+		MotorBike ducati = new MotorBike();
+		MotorBike honda = new MotorBike();
+
+		ducati.start();
+		honda.start();
+		
+		ducati.BikeRun = 100;
+		honda.BikeRun = 80;
+		
+		ducati.BikeRun = 20;
+		honda.BikeRun = 0;
+	}
+
+}

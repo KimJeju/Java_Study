@@ -1,0 +1,24 @@
+package com.in28minutes.oops;
+
+public class MotorBike {
+
+	//오토바이의 상태를 나타내는 함수 (state)
+	private int speed; //멤버 변수
+	
+	//오토바이의 행동을 나타는 함수 (behaviour)
+	//public int BikeRun = speed;
+	
+	//method 
+	//intput -> int speed
+	//output -> 변수 이름 (인자)
+	//name -> setSpeed (목적이 드러나게 설정)
+	void setSpeed(int speed //지역변수) {
+		System.out.println(speed())
+		
+	}
+	
+	
+	void start() {
+		System.out.println("Bike started");
+	}
+}

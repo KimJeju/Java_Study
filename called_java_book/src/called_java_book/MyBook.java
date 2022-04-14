@@ -14,9 +14,9 @@ public class MyBook {
 		cleanCode.MyBook();
 		
 		
-		artOfComputerProgramming.noOfCopies = 10;
-		EffectiveJava.noOfCopies = 5;
-		cleanCode.noOfCopies = 7;
+		artOfComputerProgramming.setNoOfCopies(5);
+		EffectiveJava.setNoOfCopies(3);
+		cleanCode.setNoOfCopies(0);
 	}
 
 }

@@ -7,13 +7,15 @@ public class MotorBikeRunner {
 		MotorBike honda = new MotorBike();
 
 		ducati.start();
+		
+		ducati.setSpeed(100);
+		System.out.println(ducati.getSpeed());
+		
 		honda.start();
-		
-		ducati.speed = 100;
-		honda.speed = 80;
-		
-		ducati.speed = 20;
-		honda.speed = 0;
+
+		honda.setSpeed(80);
+		System.out.println(honda.getSpeed());
+
 	}
 
 }
