@@ -9,11 +9,6 @@ public class JavaBook {
 		this.noOfCopies = noOfCopies;
 	}
 	
-	JavaBook() {
-		this(5);
-	}
-	
-	
 	public int getNoOfCopies() { 
 		return noOfCopies;
 	}

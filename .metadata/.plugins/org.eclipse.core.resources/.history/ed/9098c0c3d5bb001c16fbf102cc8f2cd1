@@ -25,7 +25,6 @@ public class MyBook {
 		System.out.println(artOfComputerProgramming.getNoOfCopies());
 		System.out.println(EffectiveJava.getNoOfCopies());
 		System.out.println(cleanCode.getNoOfCopies());
-		System.out.println(None.getNoOfCopies());
 	}
 
 }

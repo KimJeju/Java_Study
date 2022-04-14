@@ -10,7 +10,7 @@ public class JavaBook {
 	}
 	
 	JavaBook() {
-		this(5);
+		
 	}
 	
 	
