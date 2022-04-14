@@ -9,8 +9,6 @@ public class MotorBike {
 		this.speed = speed;
 	}
 	
-	MotorBike(){};
-	
 	
 	public int getSpeed() {
 		return speed;

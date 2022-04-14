@@ -7,8 +7,6 @@ public class MotorBikeRunner {
 		MotorBike ducati = new MotorBike(100);
 		MotorBike honda = new MotorBike(200);
 		MotorBike suzuki = new MotorBike(50);
-		MotorBike anything = new MotorBike();
-
 
 		System.out.println(ducati.getSpeed());
 		System.out.println(honda.getSpeed());
@@ -34,7 +32,6 @@ public class MotorBikeRunner {
 		//honda.setSpeed(80);
 		System.out.println(ducati.getSpeed());
 		System.out.println(honda.getSpeed());
-		System.out.println(suzuki.getSpeed());
 
 	}
 

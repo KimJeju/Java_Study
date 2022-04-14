@@ -9,7 +9,7 @@ public class MotorBike {
 		this.speed = speed;
 	}
 	
-	MotorBike(){};
+	MoterBike
 	
 	
 	public int getSpeed() {
