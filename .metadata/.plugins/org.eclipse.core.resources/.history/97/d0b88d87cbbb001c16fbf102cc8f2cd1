@@ -5,7 +5,7 @@ public class JavaBook {
 	//멤버변수생성
 	private int noOfCopies;
 	
-	JavaBook(int noOfCopies){
+	public javaBook(int noOfCopies){
 		this.noOfCopies = noOfCopies;
 	}
 	

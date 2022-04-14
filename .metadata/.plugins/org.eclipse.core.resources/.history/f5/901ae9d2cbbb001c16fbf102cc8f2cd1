@@ -6,7 +6,7 @@ public class MyBook {
 	
 		JavaBook artOfComputerProgramming = new JavaBook(100);
 		JavaBook EffectiveJava = new JavaBook(100);
-		JavaBook cleanCode = new JavaBook(100);
+		JavaBook cleanCode = new JavaBook(1000);
 		
 		artOfComputerProgramming.MyBook();
 		EffectiveJava.MyBook();

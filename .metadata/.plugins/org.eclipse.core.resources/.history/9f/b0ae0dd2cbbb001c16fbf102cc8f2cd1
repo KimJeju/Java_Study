@@ -5,8 +5,8 @@ public class MyBook {
 	public static void main(String[] args) {
 	
 		JavaBook artOfComputerProgramming = new JavaBook(100);
-		JavaBook EffectiveJava = new JavaBook(100);
-		JavaBook cleanCode = new JavaBook(100);
+		JavaBook EffectiveJava = new JavaBook(1000);
+		JavaBook cleanCode = new JavaBook(1000);
 		
 		artOfComputerProgramming.MyBook();
 		EffectiveJava.MyBook();
