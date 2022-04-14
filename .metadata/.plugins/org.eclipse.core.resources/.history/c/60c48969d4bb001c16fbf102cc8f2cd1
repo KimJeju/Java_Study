@@ -10,9 +10,7 @@ public class MotorBike {
 	}
 	
 	MotorBike(){
-		this(5);
-		//this.speed = 5; 
-		//디폴트 생성
+		this.speed = 5;
 	};
 	
 	
