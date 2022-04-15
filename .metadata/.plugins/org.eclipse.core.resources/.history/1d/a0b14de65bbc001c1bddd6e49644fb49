@@ -1,0 +1,24 @@
+package com.in28minutes.oops;
+
+public class RpgGame {
+
+	private int RpgGame;
+	
+	
+	RpgGame(int Power) {
+		if(Power > 0)
+		this.RpgGame = 0
+		this.RpgGame = Power;
+	}
+	
+	
+	RpgGame() { //뉴비 기본값
+		this(1)
+	}
+	
+	
+	public int getOffensePower(int Power) {
+		return Power;
+	}
+	
+}

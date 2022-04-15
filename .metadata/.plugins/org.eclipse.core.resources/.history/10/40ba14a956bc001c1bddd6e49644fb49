@@ -1,0 +1,28 @@
+package com.in28minutes.oops;
+
+public class Airplane_test {
+
+	private int plane;
+
+
+	public int getPlane() {
+		return plane;
+	}
+
+	public void setPlane(int plane) {
+		if(plane > 0)
+		this.plane = plane;
+	}
+	
+	public void 
+	
+	
+	
+	
+	
+	void start() {
+		System.out.println("airplane Start");
+	}
+	
+	
+}

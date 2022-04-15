@@ -1,0 +1,22 @@
+package com.in28minutes.oops;
+
+public class RpgGame {
+
+	private int RpgGame;
+	
+	
+	RpgGame(int Power) {
+		if(Power > 0)
+		this.RpgGame = Power;
+	}
+	
+	RpgGame() {
+		this(1)
+	}
+	
+	
+	public int getOffensePower(int Power) {
+		this.RpgGame = power;
+	}
+	
+}

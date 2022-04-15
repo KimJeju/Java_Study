@@ -1,0 +1,13 @@
+package com.in28minutes.oops;
+
+public class starbucsRunner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		starbuks iceamericano = new starbucks();
+		starbuks CafeLatte = new starbucks();
+		starbuks ballinaLatte = new starbucks();
+
+	}
+
+}

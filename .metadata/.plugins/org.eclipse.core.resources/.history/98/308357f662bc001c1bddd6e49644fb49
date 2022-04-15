@@ -1,0 +1,10 @@
+package com.in28minutes.oops;
+
+public class starbucks {
+
+	private int starbucks;
+	
+	starbucks(int cafe) {
+		
+	}
+}

@@ -24,7 +24,7 @@ public class MotorBikeRunner {
 		suzuki.start();
 		
 		
-		ducati.setSpeed(100);
+		ducati.setSpeed(70);
 		//System.out.println(ducati.getSpeed());
 		
 		ducati.increaseSpeed(100);

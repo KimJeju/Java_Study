@@ -1,0 +1,17 @@
+package com.in28minutes.oops;
+
+public class RpgGameRunner {
+
+	public static void main(String[] args) {
+		
+		RpgGame knight = new RpgGame();
+		RpgGame wizard = new RpgGame();
+		RpgGame archer = new RpgGame();
+		
+		
+		System.out.println(knight.getOffensePower());
+		
+
+	}
+
+}

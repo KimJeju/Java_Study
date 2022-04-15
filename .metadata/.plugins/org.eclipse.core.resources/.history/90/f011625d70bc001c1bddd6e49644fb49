@@ -1,0 +1,38 @@
+package com.in28minutes.oops;
+
+public class starbucks {
+
+	private int starbucks;
+	
+	starbucks(int sold) { //생성자를 만들기 위한 메서드
+		if(sold <= 0)
+		this.starbucks = 0;
+		
+		else
+		this.starbucks = sold;	
+	}
+	
+	starbucks(){
+		this(1);
+	}
+	
+	
+	public int getStarBucks() {
+		return starbucks;
+	}
+	
+	public void setStarBuck(int howToManySold) {
+		this.starbucks = howToManySold;
+	}
+	
+	
+	public void increace(int soldEd){
+		this.starbucks = this.starbucks + soldEd;
+	}
+	
+	public void decreace(int cancel) {
+		this.starbucks = this.starbucks - cancel;
+	}
+	
+	
+}

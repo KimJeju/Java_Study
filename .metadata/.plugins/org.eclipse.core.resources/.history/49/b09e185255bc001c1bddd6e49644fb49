@@ -1,0 +1,7 @@
+package com.in28minutes.oops;
+
+public class Airplane_test {
+
+	Airplane_test koreaAir = new Airplane_test();
+	Airplane_test asiaAor = new Airplane_test();
+}

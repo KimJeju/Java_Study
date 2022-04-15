@@ -1,0 +1,23 @@
+package com.in28minutes.oops;
+
+public class starbucks {
+
+	private int starbucks;
+	
+	starbucks(int sold) {
+		if(sold <= 0)
+		this.starbucks = 0;
+		
+		else
+		this.starbucks = sold;	
+	}
+	
+	starbucks(){
+		this(1);
+	}
+	
+	
+	public int starBucks() {
+		this.starbucks
+	}
+}
