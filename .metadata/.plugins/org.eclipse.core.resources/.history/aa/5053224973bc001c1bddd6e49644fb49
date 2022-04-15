@@ -35,7 +35,6 @@ public class starbucks {
 		if(cancel <= 0)
 		this.starbucks = 0;
 		
-		else
 		this.starbucks = this.starbucks - cancel;
 	}
 	

@@ -27,15 +27,10 @@ public class starbucks {
 	
 	
 	public void increace(int soldEd){ // 플러스
-		
 		this.starbucks = this.starbucks + soldEd;
 	}
 	
 	public void decreace(int cancel) { // 마이너스
-		if(cancel <= 0)
-		this.starbucks = 0;
-		
-		else
 		this.starbucks = this.starbucks - cancel;
 	}
 	

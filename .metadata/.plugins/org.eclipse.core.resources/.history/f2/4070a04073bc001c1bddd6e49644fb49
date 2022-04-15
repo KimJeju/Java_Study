@@ -32,10 +32,7 @@ public class starbucks {
 	}
 	
 	public void decreace(int cancel) { // 마이너스
-		if(cancel <= 0)
-		this.starbucks = 0;
-		
-		else
+		if(decreace <= 0)
 		this.starbucks = this.starbucks - cancel;
 	}
 	

@@ -9,13 +9,11 @@ public class starbucsRunner {
 		starbucks CafeLatte = new starbucks();
 		starbucks ballinaLatte = new starbucks();
 		
+		iceamericano.start();
 		
 		System.out.println(iceamericano.getStarBucks());
 		System.out.println(CafeLatte.getStarBucks());
 		System.out.println(ballinaLatte.getStarBucks());
-		
-		iceamericano.start();
-
 		
 		iceamericano.increace(5);
 		CafeLatte.increace(7);
