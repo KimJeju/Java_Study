@@ -41,7 +41,5 @@ public class Airplane_test {
 		System.out.println("airplane Start");
 	}
 	
-	//test
-	
 	
 }
