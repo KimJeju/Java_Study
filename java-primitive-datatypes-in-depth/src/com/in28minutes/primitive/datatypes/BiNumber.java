@@ -12,8 +12,6 @@ public class BiNumber {
 	}
 	
 	
-	
-	
 	public int getNumber1() {
 		return Number1;
 	}
@@ -21,8 +19,6 @@ public class BiNumber {
 	public void setNumber1(int number1) {
 		Number1 = number1;
 	}
-
-
 
 
 	public int getNumber2() {
