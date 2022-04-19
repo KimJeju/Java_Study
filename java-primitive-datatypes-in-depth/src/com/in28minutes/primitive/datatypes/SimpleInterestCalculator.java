@@ -6,7 +6,7 @@ public class SimpleInterestCalculator {
 	
 	BigDecimal principal;
 	BigDecimal interest;
-	
+	 
 	
 	public SimpleInterestCalculator(String principal, String interest) {
 		this.principal = new BigDecimal(principal);
