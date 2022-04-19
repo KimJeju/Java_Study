@@ -6,8 +6,8 @@ public class AirplaneRunner {
 		// TODO Auto-generated method stub
 
 
-		Airplane_test koreaAir = new Airplane_test(5);
-		Airplane_test asiaAir = new Airplane_test(5);
+		Airplane_test koreaAir = new Airplane_test();
+		Airplane_test asiaAir = new Airplane_test();
 		
 		System.out.println(koreaAir.getPlane()); // 5
 		System.out.println(asiaAir.getPlane()); // 10
@@ -17,7 +17,7 @@ public class AirplaneRunner {
 		
 		
 		koreaAir.setPlane(12);
-		
+		 
 		koreaAir.increace(5);
 		asiaAir.decreace(0);
 		
