@@ -11,6 +11,7 @@ public class myChar {
 	}
 	
 	
+	// 리터럴 값이 모음인지를 판단
 	public boolean isVowel() {
 		// a e i o u or A E I O U
 		if(ch == 'a' || ch == 'e' || ch == 'i' ||ch ==  'o' ||ch ==  'u' ||
@@ -22,6 +23,7 @@ public class myChar {
 	}
 	
 
+	// 리터럴값의 숫자 여부 판단
 	public boolean isNumber() {
 			for(char i = 48; i <= 57; ++i ) {
 				if(this.ch == i)
@@ -32,6 +34,8 @@ public class myChar {
 	}
 	
 	
+	
+	// 리터럴값의 알파벳 여부판단
 	public boolean isAlphabet() {
 		 for(char i = 65; i <= 90; ++i ) 
 		 {
