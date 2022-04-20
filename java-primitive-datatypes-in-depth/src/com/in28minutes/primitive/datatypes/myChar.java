@@ -22,15 +22,49 @@ public class myChar {
 	}
 	
 
-	public void isNumber(char isNum) {
-		if(this.ch == isNum) {
+	public boolean isNumber() {
 			for(char i = 48; i <= 57; ++i ) {
-			System.out.println(true);	
+				if(this.ch == i)
+				return true;
 			}	
-		}
 		
-		else
-		System.out.println(false);
+			return false;
+	}
+	
+	
+	public boolean isAlphabet() {
+		 for(char i = 65; i <= 90; ++i ) 
+		 {
+			if(this.ch == i + 32 || this.ch == i)
+			return true; 
+		 }
+		 return false;
+	}
+	
+	
+	//대문자를 소문자로 변경
+	public void printLowerCaseAlphabets() {
+		for(char i = 65; i <= 90; ++i)
+		{ 
+			if(this.ch == i) {
+				this.ch = (char)(this.ch + 32);
+				System.out.println(ch);
+				break;
+			}
+			
+		}
+	}
+	
+	
+	//소문자 대문자로 변경
+	public void printUpperCaseAlphabets() {
+		for(char i = 97; i <= 122; ++i )
+			if(this.ch == i) {
+				this.ch = (char)(this.ch - 32);
+				System.out.println(ch);
+				break;
+			}
+	
 	}
 
 
