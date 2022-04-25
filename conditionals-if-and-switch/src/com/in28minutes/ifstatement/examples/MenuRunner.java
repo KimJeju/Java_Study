@@ -32,12 +32,7 @@ public class MenuRunner {
 			System.out.println("Multlply =" + Multiply);
 		}
 		
-		
-		
-		
-		
-		
-		
+			
 
 	}
 
