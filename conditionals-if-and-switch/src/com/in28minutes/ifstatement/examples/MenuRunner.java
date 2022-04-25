@@ -15,6 +15,29 @@ public class MenuRunner {
 		int Number1 = scanner.nextInt();  //사용자 입력값을 받아준다.
 		
 		System.out.println("The Number you Entered is = " + Number1); // 문자열 뒤에 + 를 붙여주면 정수를 붙여서 출력해준다.
+		
+		System.out.println("Enter Number2 :");
+		int Number2 = scanner.nextInt();
+		
+		System.out.println("The Number you Enter ed is = " + Number2);
+		
+		System.out.println("Enter the Menu" + '\n' + "1.add" + '\n' + "2.Multyply");
+		int Menu = scanner.nextInt();
+		
+		if(Menu == 1) {
+			int add = Number1 + Number2;
+			System.out.println("add = " + add);
+		}else if(Menu == 2) {
+			int Multiply = Number1 * Number2;
+			System.out.println("Multlply =" + Multiply);
+		}
+		
+		
+		
+		
+		
+		
+		
 
 	}
 
