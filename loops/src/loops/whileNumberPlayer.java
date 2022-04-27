@@ -8,14 +8,12 @@ public class whileNumberPlayer {
 		this.Player = Play;
 	}
 
-	public void printSquaresUptoLimit(int Square) {
+	public void printSquaresUptoLimit() {
 		
-		this.Player = Square;
-		
-		for(int i = 1; i <= 30; i = i + 2)
-		while(true) {
-			System.out.
-			
+		int i = 1;
+		while(i*i <= 30) {
+		System.out.println("printSquaresUptoLimit : " + i*i);
+		i++;
 		}
 		
 	}

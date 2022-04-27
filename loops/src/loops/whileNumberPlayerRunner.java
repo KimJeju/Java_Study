@@ -5,7 +5,7 @@ public class whileNumberPlayerRunner {
 
 	public static void main(String[] args) {
 		
-		whileNumberPlayer Player = new 	whileNumberPlayer(10);
+		whileNumberPlayer Player = new 	whileNumberPlayer(30);
 
 		Player.printSquaresUptoLimit();
 	}
