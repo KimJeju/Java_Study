@@ -8,10 +8,10 @@ public class whileNumberPlayer {
 		this.Player = Play;
 	}
 
-	public void printSquaresUptoLimit() {
+	public void printSquaresUptoLimit() { //세제곱 출력을 위한 while문
 		
 		int i = 1;
-		while(i*i <= 30) {
+		while(i*i <= Player) {
 		System.out.println("printSquaresUptoLimit : " + i*i);
 		i++;
 		}
