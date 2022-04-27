@@ -19,7 +19,7 @@ public class myNumber {
 	
 	public boolean isPrime() {
 		
-		if(myNum <2) {
+		if(myNum <2) { //가드컨디션 : 프로그램이 돌아가기전에 기재한 숫자가 유효한지 확인
 			return false;
 		}
 		
@@ -28,9 +28,20 @@ public class myNumber {
 			return false;
 		}
 	}
-	return true;
-}
+		return true;
+	}
 	
+	
+	public int sumUptoN() {
+		
+		int sum = 0;
+		
+		for(int i = 1; i <= myNum; ++i) {
+			sum = sum + i;
+		}
+		
+		return sum;
+	}
 	
 	
 	
