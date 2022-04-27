@@ -15,6 +15,17 @@ public class whileNumberPlayer {
 		System.out.println("printSquaresUptoLimit : " + i*i);
 		i++;
 		}
+		System.out.println();
+		
+	}
+
+	public void printCubesUptoLimit() {
+		int i = 1;
+		while(i * i * i < Player) {
+			System.out.println("printCubesUptoLimit : " + i*i*i);
+			i++;
+		}
+		System.out.println();
 		
 	}
 	
