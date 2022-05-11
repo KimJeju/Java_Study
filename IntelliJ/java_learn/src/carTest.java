@@ -2,8 +2,11 @@ public class carTest {
     public static void main(String[] args) {
         Car bmw = new Car("red");
         Car jeep = new Car("jeep","black",130);
-        System.out.println(bmw.convertible(true));
-        System.out.println();
+        System.out.println(bmw);
+
+        bmw.start();
+        bmw.upSpeed();
+        bmw.convertible(true);
     }
 }
 
