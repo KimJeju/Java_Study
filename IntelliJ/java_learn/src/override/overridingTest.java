@@ -1,3 +1,5 @@
+package override;
+
 public class overridingTest {
     public static void main(String[] args) {
         MotorBike motorBike = new MotorBike(); //각각 개체에 맞는 선언

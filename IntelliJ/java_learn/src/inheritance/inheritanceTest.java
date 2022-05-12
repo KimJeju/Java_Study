@@ -1,3 +1,5 @@
+package inheritance;
+
 public class inheritanceTest {
     public static void main(String[] args){
 

@@ -1,3 +1,5 @@
+package inheritance;
+
 public class EmployeeTest {
 
     int id;
