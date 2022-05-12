@@ -1,4 +1,4 @@
-package superPack;
+package inheritance.superPack;
 
 public class superHumen {
     public static void main(String[] args) {

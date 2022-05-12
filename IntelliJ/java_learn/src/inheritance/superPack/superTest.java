@@ -1,4 +1,4 @@
-package superPack;
+package inheritance.superPack;
 
 public class superTest {
     public static void main(String[] args) {

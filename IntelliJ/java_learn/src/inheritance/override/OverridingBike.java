@@ -1,4 +1,4 @@
-package override;
+package inheritance.override;
 
 public class OverridingBike {
     void run() {

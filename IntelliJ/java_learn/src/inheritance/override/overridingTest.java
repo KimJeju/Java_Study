@@ -1,4 +1,4 @@
-package override;
+package inheritance.override;
 
 public class overridingTest {
     public static void main(String[] args) {

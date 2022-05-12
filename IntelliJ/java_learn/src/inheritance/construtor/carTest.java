@@ -1,4 +1,4 @@
-package construtor;
+package inheritance.construtor;
 
 public class carTest {
     public static void main(String[] args) {
