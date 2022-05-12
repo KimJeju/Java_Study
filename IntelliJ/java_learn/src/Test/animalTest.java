@@ -8,7 +8,7 @@ public class animalTest {
         rabbit.type = "초식동물";
         rabbit.foots = 4;
         System.out.println(rabbit.name + "이구요" + " " + rabbit.type + "이에여" + " " + "발은" + rabbit.foots + "개에요");
-        
+
 
 
 
