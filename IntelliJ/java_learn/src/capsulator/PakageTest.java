@@ -1,4 +1,4 @@
-package CAPSULATOR;
+package capsulator;
 
 class PakageTest { // 패키지 테스트의 접근제어자는 public (클래스내 O, 패키지 내 O, 다른패키지 하위클래스 O, 패키지 외 O)
     public static void main(String[] args) { // 메인의 접근 제어자는 public (클래스내 O, 패키지내 O, 다른패키지 하위클래스 O, 패키지 외 O)

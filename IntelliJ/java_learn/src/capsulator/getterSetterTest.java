@@ -1,6 +1,6 @@
-package CAPSULATOR;
+package capsulator;
 
-public class GetterSetterTest {
+public class getterSetterTest {
     public static void main(String[] args) {
         Warker w = new Warker();
         w.setName("김코딩");
