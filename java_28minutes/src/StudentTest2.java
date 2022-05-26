@@ -52,7 +52,7 @@ class Stud{
         int sum = Integer.MIN_VALUE; //정수의 최소값에서부터 비교 -2147483648
 
         for(int mark:marks){
-            if(sum<mark){
+            if(sum<mark){ //sum의 크기보다 marks 의 크기가 크면 true -> 포문안으로 들어가 sum에 현재 mark 배열에 담겨있는 값을 넣어준다.
                 sum = mark;
             }
         }
