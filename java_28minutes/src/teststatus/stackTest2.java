@@ -2,7 +2,11 @@ package teststatus;
 import java.util.*;
 
 public class stackTest2 {
-    private ArrayList<Integer> listStack = new ArrayList<Integer>();
+
+    public static void main(String[] args) {
+
+    }
+    public ArrayList<Integer> listStack = new ArrayList<Integer>();
 
     public void push(Integer data) {
         listStack.add(data);
