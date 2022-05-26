@@ -29,7 +29,7 @@ public class stackTest2 {
     }
 
     public String show() {
-        return listStack.toString(Arrays.toString(listStack));
+        return listStack.toString();
     }
     public void clear() { listStack.clear(); }
 }
