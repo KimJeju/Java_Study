@@ -22,6 +22,9 @@ public class studentTest {
         BigDecimal average = student.getAverage();
         System.out.println(average);
 
+        student.addNewMark(35);
+        student.removeIndexOfMark(5);
+
     }
 }
 
@@ -29,7 +32,7 @@ class Student{
     String name;
     int[] marks;
 
-    Student(String name,int[] marks){
+    Student(String name,int... marks){
         this.name = name;
         this.marks = marks;
     }
