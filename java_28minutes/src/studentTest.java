@@ -22,8 +22,6 @@ public class studentTest {
         BigDecimal average = student.getAverage();
         System.out.println(average);
 
-        student.addNewMark(35);
-        student.removeIndexOfMark(5);
 
     }
 }
