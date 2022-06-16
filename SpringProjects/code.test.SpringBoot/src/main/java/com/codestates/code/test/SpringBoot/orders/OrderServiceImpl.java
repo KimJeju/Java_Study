@@ -1,6 +1,22 @@
 package com.codestates.code.test.SpringBoot.orders;
-import com.codestates.code.test.SpringBoot.orders.Order;
-import com.codestates.code.test.SpringBoot.orders.OrderService;
 
-public class OrderServiceImpl {
+import com.codestates.code.test.SpringBoot.discount.CurrentDiscountInfo;
+import com.codestates.code.test.SpringBoot.discount.DiscountInfo;
+import com.codestates.code.test.SpringBoot.user.User;
+import com.codestates.code.test.SpringBoot.user.UserRepository;
+import com.codestates.code.test.SpringBoot.user.UserRepositoryImpl;
+import com.codestates.code.test.SpringBoot.user.UserServiceImpl;
+
+public class OrderServiceImpl implements OrderService{
+
+    private final UserRepository userRepository = new UserRepositoryImpl();
+    private final DiscountInfo discountInfo = new CurrentDiscountInfo();
+
+    @Override
+    public Order createOrder(Long userId, String iTemName, int iTemPrice) {
+        User user = userRepository.findByUserId(userId);
+        int discountPrice = discountInfo.discount(user,iTemPrice);
+
+        return new Order(userId,iTemName,iTemPrice,discountPrice);
+    }
 }
