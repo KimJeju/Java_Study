@@ -1,15 +1,10 @@
 package com.codestates.code.test.SpringBoot.user;
 
-import com.codestates.code.test.SpringBoot.user.User;
-import com.codestates.code.test.SpringBoot.user.UserGrable;
-import com.codestates.code.test.SpringBoot.user.UserService;
-import com.codestates.code.test.SpringBoot.user.UserServiceImpl;
-
 public class userApp {
 
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
-        User user = new User(0L,"KimCoding",UserGrable.GRABLE_2);
+        User user = new User(0L,"KimCoding", UserGrade.GRABLE_2);
         userService.signUp(user);
 
         User currentUser = userService.findUser(0L);

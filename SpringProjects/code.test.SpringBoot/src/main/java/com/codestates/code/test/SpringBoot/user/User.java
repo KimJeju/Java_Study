@@ -3,12 +3,12 @@ package com.codestates.code.test.SpringBoot.user;
 public class User {
     private Long id;
     private String name;
-    private UserGrable userGrable;
+    private UserGrade userGrade;
 
-    public User(Long id, String name, UserGrable userGrable){
+    public User(Long id, String name, UserGrade userGrade){
         this.id = id;
         this.name = name;
-        this.userGrable = userGrable;
+        this.userGrade = userGrade;
     }
 
     public Long getId(){
@@ -27,12 +27,12 @@ public class User {
         this.name = name;
     }
 
-    public UserGrable getUserGrable() {
-        return userGrable;
+    public UserGrade getUserGrable() {
+        return userGrade;
     }
 
-    public void setUserGradle(UserGrable userGrable){
-        this.userGrable = userGrable;
+    public void setUserGradle(UserGrade userGrade){
+        this.userGrade = userGrade;
     }
 
 
