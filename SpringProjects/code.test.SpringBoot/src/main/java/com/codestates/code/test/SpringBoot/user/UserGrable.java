@@ -1,4 +1,4 @@
-package user;
+package com.codestates.code.test.SpringBoot.user;
 
 public enum UserGrable {
     GRABLE_0,

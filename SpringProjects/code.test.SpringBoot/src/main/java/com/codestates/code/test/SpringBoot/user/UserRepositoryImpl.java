@@ -1,8 +1,8 @@
-package user;
+package com.codestates.code.test.SpringBoot.user;
 
 import java.util.HashMap;
 
-public class UserRepositoryImpl implements userRepository{
+public class UserRepositoryImpl implements UserRepository {
 
     private static HashMap<Long, User> users = new HashMap<>();
 

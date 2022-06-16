@@ -1,4 +1,4 @@
-package user;
+package com.codestates.code.test.SpringBoot.user;
 
 public class User {
     private Long id;
