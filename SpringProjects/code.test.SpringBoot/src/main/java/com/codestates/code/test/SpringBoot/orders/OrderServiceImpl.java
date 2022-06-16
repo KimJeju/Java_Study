@@ -9,8 +9,16 @@ import com.codestates.code.test.SpringBoot.user.UserServiceImpl;
 
 public class OrderServiceImpl implements OrderService{
 
-    private final UserRepository userRepository = new UserRepositoryImpl();
-    private final DiscountInfo discountInfo = new CurrentDiscountInfo();
+//    private final UserRepository userRepository = new UserRepositoryImpl();
+//    private final DiscountInfo discountInfo = new CurrentDiscountInfo();
+
+    private final UserRepository userRepository;
+    private final DiscountInfo discountInfo;
+
+    public OrderServiceImpl(UserRepository userRepository, DiscountInfo discountInfo){
+        this.userRepository = userRepository;
+        this.discountInfo = discountInfo;
+    }
 
     @Override
     public Order createOrder(Long userId, String iTemName, int iTemPrice) {

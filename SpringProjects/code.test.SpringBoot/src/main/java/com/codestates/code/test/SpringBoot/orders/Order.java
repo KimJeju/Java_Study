@@ -44,4 +44,10 @@ public class Order {
     public void setDiscountPrice(){
         this.discountPrice = discountPrice;
     }
+
+    @Override
+    public String toString(){
+        return "Order{" + "user id =" + userId + ", itemName =" + iTemName + ", itemPrice =" + itemPrice
+                 + ", discountPrice =" + discountPrice;
+    }
 }
