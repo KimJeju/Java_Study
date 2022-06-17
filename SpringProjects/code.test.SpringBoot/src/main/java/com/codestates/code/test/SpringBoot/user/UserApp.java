@@ -1,13 +1,18 @@
 package com.codestates.code.test.SpringBoot.user;
 
 import com.codestates.code.test.SpringBoot.AppConfig;
+import org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebApplicationContext;
+import org.springframework.context.ApplicationContext;
 
-public class userApp {
+public class UserApp {
 
     public static void main(String[] args) {
         //UserService userService = new UserServiceImpl();
-        AppConfig appConfig = new AppConfig();
-        UserService userService = appConfig.userService();
+        //AppConfig appConfig = new AppConfig();
+
+        ApplicationContext ac = new AnnotationConfigReactiveWebApplicationContext(AppConfig.class);
+        UserService userService = ac.getBean("userService", UserService.class);
+
         User user = new User(0L,"KimCoding", UserGrade.GRABLE_2);
         userService.signUp(user);
 
