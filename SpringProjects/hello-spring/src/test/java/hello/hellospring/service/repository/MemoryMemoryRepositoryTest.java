@@ -1,6 +1,7 @@
-package hello.hellospring.repository;
+package hello.hellospring.service.repository;
 
 import hello.hellospring.domain.Member;
+import hello.hellospring.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,8 @@ class MemoryMemoryRepositoryTest {
     //테스트는 메서드에 타 메서드와 같은 값이 들어갈 수 있기 때문에 AfterEach 이너테이션을 통해 클리어를 지속적으로 해주어야한다.
     @AfterEach
     public void afterEach(){
-        //테스트가 끝날 때 마다 데이터를 비움.
+        //테스트가 끝날 때 마다 데이터를 비움.ㅊㄱ
+
 
         Repository.clearStore();
     }
