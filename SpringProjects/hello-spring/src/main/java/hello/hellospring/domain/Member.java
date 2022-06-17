@@ -1,8 +1,7 @@
 package hello.hellospring.domain;
 
-import java.util.function.Predicate;
 
-public class Member implements Predicate<Member> {
+public class Member{
 
 
     //데이터를 구분하기 위해서 시스템이 저장하는 아이디
