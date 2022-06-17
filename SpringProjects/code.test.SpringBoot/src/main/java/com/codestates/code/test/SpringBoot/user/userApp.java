@@ -5,7 +5,7 @@ import com.codestates.code.test.SpringBoot.AppConfig;
 public class userApp {
 
     public static void main(String[] args) {
-//        UserService userService = new UserServiceImpl();
+        //UserService userService = new UserServiceImpl();
         AppConfig appConfig = new AppConfig();
         UserService userService = appConfig.userService();
         User user = new User(0L,"KimCoding", UserGrade.GRABLE_2);

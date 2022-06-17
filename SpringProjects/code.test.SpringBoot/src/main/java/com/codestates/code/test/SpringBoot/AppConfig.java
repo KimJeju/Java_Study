@@ -10,9 +10,12 @@ import com.codestates.code.test.SpringBoot.user.UserRepository;
 import com.codestates.code.test.SpringBoot.user.UserService;
 import com.codestates.code.test.SpringBoot.user.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
+@ComponentScan
 public class AppConfig {
 
     @Bean
