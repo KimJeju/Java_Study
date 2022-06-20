@@ -1,6 +1,7 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 //MemberRepository 멤버 및 메서드들을 구현할 구현체
+@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
    HashMap<Long,Member> store = new HashMap<>();
