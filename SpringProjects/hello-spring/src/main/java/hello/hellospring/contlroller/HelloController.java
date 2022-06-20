@@ -44,6 +44,8 @@ public class HelloController {
         public void setHello(String hello){
             this.hello = hello;
         }
+
+        //6월 18일 쉬는날
     }
 
 }
