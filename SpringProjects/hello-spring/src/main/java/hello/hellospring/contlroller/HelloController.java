@@ -45,7 +45,6 @@ public class HelloController {
             this.hello = hello;
         }
 
-        //6월 18일 쉬는날
     }
 
 }
