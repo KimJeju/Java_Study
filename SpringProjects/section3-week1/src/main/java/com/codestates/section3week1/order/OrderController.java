@@ -15,25 +15,26 @@ import java.util.Map;
 public class OrderController {
 
     @PostMapping
-    public ResponseEntity postOrder(@RequestParam("memberId") String memberId,
+    public ResponseEntity postOrder(
+                            @RequestParam("memberId") String memberId,
                             @RequestParam("coffeeId") String coffeeId){
 
         Map<String,String> map = new HashMap<>();
         map.put("memberId",memberId);
         map.put("coffeeId",coffeeId);
 
-        return new ResponseEntity(map, HttpStatus.CREATED);
+        return new ResponseEntity<>(map, HttpStatus.CREATED);
     }
 
     @GetMapping("{order-id}")
     public ResponseEntity getOrder(@PathVariable("order-id")long orderId){
         System.out.println("#order-id : " + orderId);
 
-        return new ResponseEntity(orderId,HttpStatus.OK);
+        return new ResponseEntity<>(orderId,HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity getOrders(){
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
