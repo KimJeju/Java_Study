@@ -1,39 +1,39 @@
 package com.codestates.section3week1.order;
 
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
-@RequestMapping(value = "/v1/orders", produces = MediaType.APPLICATION_JSON_VALUE) //공용 url 설정
+@RequestMapping(value = "/v1/orders") //공용 url 설정
 public class OrderController {
 
     @PostMapping
-    public String postOrder(@RequestParam("memberId") String memberId,
+    public ResponseEntity postOrder(@RequestParam("memberId") String memberId,
                             @RequestParam("coffeeId") String coffeeId){
-        System.out.println("# memberId :" + memberId);
-        System.out.println("# coffeeId :" + coffeeId);
 
-        String response =
-                "{\"" +
-                        "memberId\":\"" + memberId + "\"" +
-                        "coffeeId\":" + coffeeId + "\"" +
-                        "}";
+        Map<String,String> map = new HashMap<>();
+        map.put("memberId",memberId);
+        map.put("coffeeId",coffeeId);
 
-        return response;
+        return new ResponseEntity(map, HttpStatus.CREATED);
     }
 
     @GetMapping("{order-id}")
-    public String getOrder(@PathVariable("order-id")long orderId){
+    public ResponseEntity getOrder(@PathVariable("order-id")long orderId){
         System.out.println("#order-id : " + orderId);
 
-        return null;
+        return new ResponseEntity(orderId,HttpStatus.OK);
     }
 
     @GetMapping
-    public String getOrders(){
-        return null;
+    public ResponseEntity getOrders(){
+        return new ResponseEntity(HttpStatus.OK);
     }
 }
