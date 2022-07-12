@@ -21,7 +21,7 @@ public class OrderApp {
         // MemberServiceImpl(new MemoryMemberRepository)
         // OrderServiceImpl(new MemoryMemberRepository(),new FixDiscountPolicy()) 를 가지게 된다.
 //        MemberService memberService = appConfig.memberService();
-//        OrderService orderService = appConfig.orderService();
+//        OrderService orderService = appConfig.or
 
         ApplicationContext ac = new AnnotationConfigReactiveWebApplicationContext(AppConfig.class);
 

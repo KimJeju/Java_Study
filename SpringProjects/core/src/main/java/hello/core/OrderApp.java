@@ -5,21 +5,24 @@ import hello.core.member.Member;
 import hello.core.member.MemberService;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
+import org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebApplicationContext;
+import org.springframework.context.ApplicationContext;
 
 public class OrderApp {
     public static void main(String[] args) {
 
 
-        //appConfig선언
-        AppConfig appConfig = new AppConfig();
-
+//        //appConfig선언
+//        AppConfig appConfig = new AppConfig();
+        ApplicationContext ac = new AnnotationConfigReactiveWebApplicationContext(AppConfig.class);
 
         //appConfig를 통한 생성자 주입
         //각각
         // MemberServiceImpl(new MemoryMemberRepository)
         // OrderServiceImpl(new MemoryMemberRepository(),new FixDiscountPolicy()) 를 가지게 된다.
-        MemberService memberService = appConfig.memberService();
-        OrderService orderService = appConfig.orderService();
+
+        MemberService memberService = ac.getBean("memberService",MemberService.class);
+        OrderService orderService = ac.getBean("orderService", OrderService.class);
 
         Long memberId = 1L;
         //멤버저장

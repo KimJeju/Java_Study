@@ -8,10 +8,15 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+//appconfig는 DI컨테이너(IOC 컨테이너) 이다.
+//객체를 생성하고 관리하면서 의존관계를 주입해줌.
 
 //공연기획자
 //앱전체를 설정하고 구성하는 클래스
+@Configuration
 public class AppConfig {
 
 
@@ -21,6 +26,7 @@ public class AppConfig {
 
 
     //멤버서비스 역할
+    @Bean
     public MemberService memberService(){
         //리파지토리 선택
         //생성자 주입
@@ -32,7 +38,8 @@ public class AppConfig {
 
 
     //레파지토리 역할
-    private MemoryMemberRepository MemberRepository() {
+    @Bean
+    public MemoryMemberRepository MemberRepository() {
 
        //만약 멤버리포지토리를 변경할 것이면 이곳만 변경하면 된다.
         return new MemoryMemberRepository();
@@ -40,12 +47,14 @@ public class AppConfig {
 
 
     //오더서비스 역할
+    @Bean
     public OrderService orderService(){
         //할인정책과 멤버정보를 가져올 레파지토리 생성자주입
         return new OrderServiceImpl(MemberRepository(),discountPolicy());
     }
 
     //할인정책역할
+    @Bean
     public DiscountPolicy discountPolicy(){
         //구현클래스가 한눈에 보인다.
         //디스카운트폴리시에 대한 구현체 fixDiscount
