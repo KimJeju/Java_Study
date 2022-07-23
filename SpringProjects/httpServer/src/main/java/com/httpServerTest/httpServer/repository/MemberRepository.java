@@ -1,4 +1,4 @@
-package com.httpServerTest.httpServer;
+package com.httpServerTest.httpServer.repository;
 
 import com.httpServerTest.httpServer.Entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
