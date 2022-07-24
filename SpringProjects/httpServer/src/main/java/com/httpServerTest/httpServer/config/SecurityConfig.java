@@ -24,7 +24,7 @@ public class SecurityConfig {
                 .antMatchers("/manager/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')")
                 .antMatchers("/admin/**").access("hasRole('Role_admin')")
                 .anyRequest().permitAll()
-                .and()
+                .and()  //아래는 권한이 없을 시 로그인 form으로 이동하는 람다입니다.
                 .formLogin()
                 .loginPage("/login");
         return http.build();

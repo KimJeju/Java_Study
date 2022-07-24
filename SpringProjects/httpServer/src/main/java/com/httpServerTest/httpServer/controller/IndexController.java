@@ -39,11 +39,13 @@ public class IndexController {
     }
 
     @GetMapping("/login")
+    @ResponseBody
     public String login(){
         return "loginForm";
     }
 
     @GetMapping("/join")
+    @ResponseBody
     public String join(){
         return "joinForm";
     }
