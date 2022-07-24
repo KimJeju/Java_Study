@@ -39,20 +39,17 @@ public class IndexController {
     }
 
     @GetMapping("/login")
-    @ResponseBody
     public String login(){
         return "loginForm";
     }
 
     @GetMapping("/join")
-    @ResponseBody
     public String join(){
         return "joinForm";
     }
 
 
     @PostMapping("/join") //회원가입 메서드
-    @ResponseBody
     public String join(Member member){
         member.setRole("ROLE_USER");
         String rawPassword = member.getPassword(); //기존 패스워드 가져오기
