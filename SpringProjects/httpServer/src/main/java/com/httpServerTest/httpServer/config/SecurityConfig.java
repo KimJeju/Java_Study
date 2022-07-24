@@ -4,6 +4,7 @@ package com.httpServerTest.httpServer.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -11,7 +12,8 @@ import org.springframework.security.web.SecurityFilterChain;
 
 
 @Configuration
-@EnableWebSecurity //스프링 시큐리티 필터가 스프링 필터 체인에 등록된다.
+@EnableWebSecurity //스프링 시큐리티 필터가 스프링 필터 체인에 등록된다.               prePostEnabled=true : PreAuthorize 와 PostAuthorize 활성화e
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true) //securedEnabled = true : Config가 아닌 Controller에서 접근 권한 설정 가능
 public class SecurityConfig {
 
     @Bean
@@ -22,7 +24,7 @@ public class SecurityConfig {
         http.authorizeRequests()
                 .antMatchers("/user/**").authenticated()
                 .antMatchers("/manager/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')")
-                .antMatchers("/admin/**").access("hasRole('Role_admin')")
+                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().permitAll()
                 .and()  //아래는 권한이 없을 시 로그인 form으로 이동하는 람다입니다.
                 .formLogin()

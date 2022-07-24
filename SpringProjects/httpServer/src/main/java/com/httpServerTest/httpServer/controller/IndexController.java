@@ -5,10 +5,13 @@ import com.httpServerTest.httpServer.Entity.Member;
 import com.httpServerTest.httpServer.config.SecurityConfig;
 import com.httpServerTest.httpServer.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 @Controller
 public class IndexController {
@@ -43,10 +46,29 @@ public class IndexController {
         return "loginForm";
     }
 
+
+    //Secured 는 한개의 권한을 인가하기위해 사용한다.
+    @Secured("ROLE_ADMIN")     //Secured 는 securityConfig에서 .antMatchers("/info/**").access(hasRole('ROLE_ADMIN')) 과 같다.
+    @GetMapping("/info")
+    public String info(){
+        return "info";
+    }
+
     @GetMapping("/join")
-    public String join(){
+    public @ResponseBody String join(){
         return "joinForm";
     }
+
+
+    //PreAuthorize는 securityConfig 에서
+    //.antMatchers("/data/**").access(hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')) 을 하는 것과 같다.
+    //PreAuthorize 는 여러개의 권한을 인가하기 위해 사용한다.
+    @PreAuthorize("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')")
+    @GetMapping("/data")
+    public String data(){
+        return "data";
+    }
+
 
 
     @PostMapping("/join") //회원가입 메서드
