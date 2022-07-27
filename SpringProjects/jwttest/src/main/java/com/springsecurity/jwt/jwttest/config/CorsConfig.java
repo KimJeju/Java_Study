@@ -10,16 +10,15 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 public class CorsConfig {
 
-
     @Bean
-    public CorsFilter corsFilter(){
+    public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true); //서버가 응답할 때 json을 자바스크립트가 처리할 수 있게 설정
-        config.addAllowedOrigin("*"); //모든 ip 응답허용
-        config.addAllowedHeader("*"); //모든 header 응답허용
-        config.addAllowedMethod("*"); //모든 create, read, update, delete 허용
-        source.registerCorsConfiguration("/api/**",config);
+        config.setAllowCredentials(true);
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+        source.registerCorsConfiguration("/api/**", config);
 
         return new CorsFilter(source);
     }
