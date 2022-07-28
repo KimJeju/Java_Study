@@ -1,12 +1,14 @@
 package com.springsecurity.jwt.jwttest.oauth;
 
 import com.springsecurity.jwt.jwttest.entity.Member;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Getter
 public class PrincipalDetails implements UserDetails {
 
     private final Member member;
