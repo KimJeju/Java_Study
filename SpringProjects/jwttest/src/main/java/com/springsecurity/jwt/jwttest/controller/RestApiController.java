@@ -26,6 +26,15 @@ public class RestApiController {
         return "<h1>token</h1>";
     }
 
+    @GetMapping("/api/v1/user")
+    public String user() {
+        return "user";
+    }
+    // 추가
+    @GetMapping("/api/v1/admin")
+    public String admin() {
+        return "admin";
+    }
     @PostMapping("/join") //회원가입 처리를 위한 로직추가.
     public String join(@RequestBody Member member){
         member.setPassword(bCryptPasswordEncoder.encode(member.getPassword()));

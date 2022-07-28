@@ -2,6 +2,9 @@ package com.springsecurity.jwt.jwttest.config;
 
 import com.springsecurity.jwt.jwttest.filter.FirstFilter;
 import com.springsecurity.jwt.jwttest.filter.JwtAuthenticationFilter;
+import com.springsecurity.jwt.jwttest.filter.JwtAuthorizationFilter;
+import com.springsecurity.jwt.jwttest.repository.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,13 +18,14 @@ import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig {
 
-    public SecurityConfig(CorsFilter corsFilter) {
-        this.corsFilter = corsFilter;
-    }
 
     private final CorsFilter corsFilter;
+    private final MemberRepository memberRepository;
+
+
     @Bean                                                                                       //먼저실행 -> 나중에 실행
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception { //addFilterBefore(필터, 특정 필터 이름.class)
 //        http.addFilterBefore(new FirstFilter(),BasicAuthenticationFilter.class);
@@ -53,7 +57,8 @@ public class SecurityConfig {
         @Override
         public void configure(HttpSecurity builder) throws Exception{
             AuthenticationManager manager = builder.getSharedObject(AuthenticationManager.class);
-            builder.addFilter(corsFilter).addFilter(new JwtAuthenticationFilter(manager));
+            builder.addFilter(corsFilter).addFilter(new JwtAuthenticationFilter(manager))
+                    .addFilter(new JwtAuthorizationFilter(manager, memberRepository));
         }
 
     }
